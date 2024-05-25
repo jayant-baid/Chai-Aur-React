@@ -22,19 +22,20 @@ function MyApp() {
 // };
 
 const anotherElement = (
-  <a href="https://google.com" target="_blank">
-    Visit google
+  <a href="https://gmail.com" target="_blank">
+    Visit GMAIL
   </a>
 );
 
-const anotherUser = "chai aur react"
+const anotherUser = "chai aur react";
 
 const reactElement = React.createElement(
   "a",
   { href: "https://google.com", target: "_blank" },
   "Click Me to Visit GOOGLE",
-  anotherUser // evaluated expression: variables idhar likhte h,
-//   baki last me show hota h, even we can send another element here too
+  anotherUser, // evaluated expression: variables idhar likhte h,
+  anotherElement
+  //   baki last me show hota h, even we can send another element here too
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -44,7 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   // <ReactElement/> // not able to execute, because idhar expect kia jata h ki aap func bhejoge,
   //   Object thodi esse execute hota h, usse toh directly likh dete h
   // ReactElement //Error: ReactElement is not a function
-    // <App/>
+  // <App/>
 
   //   anotherElement // running successfully
   reactElement
